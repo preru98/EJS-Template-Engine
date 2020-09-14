@@ -20,6 +20,17 @@
                 Using EJS
             </p>
         </div>
+        <h2>Variable</h2>
+        <p><%= tagline%></p>
+        <h2>Loop</h2>
+        <ul>
+            <% posts.forEach(function(post){ %>
+            <li><%=post.title%> <br>
+                By -<%=post.author%> <br>
+                <%=post.description%>
+            </li>
+            <% });%>
+        </ul>
     </main>
     <footer>
         <% include ../partials/footer %>
